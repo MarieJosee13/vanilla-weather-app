@@ -14,8 +14,70 @@
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <a href="" class="btn btn-primary">Click me</a>
+    <div class="container"></div>
+    <div class="weather-app">
+      <div class="row">
+        <div class="col-6">
+          <input
+            type="search"
+            id="form1"
+            class="form-control"
+            placeholder="Search City"
+          />
+        </div>
+        <div class="col-6">
+          <a href="" class="btn btn-primary">Search</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <h2>Vancouver</h2>
+          <ul>
+            <li>Saturday 02:07PM</li>
+            <li>
+              Humidity:<span class="current-details">95%</span>, Wind:<span
+                class="current-details"
+                >4.12km/h</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6">
+          <h1><span class="icon">☀️</span>12<span class="unit">°C</span></h1>
+        </div>
+        <div class="five-day">
+          <div class="row">
+            <div class="col-2">
+              <p>Sat <br />🌧️</p>
+              <p class="high">10<span class="low"> 4</span></p>
+            </div>
+            <div class="col-2">
+              <p>Sun <br />⛅</p>
+              <p class="high">5<span class="low"> 2</span></p>
+            </div>
+            <div class="col-2">
+              <p>Mon <br />🌧️</p>
+              <p class="high">1<span class="low"> -3</span></p>
+            </div>
+            <div class="col-2">
+              <p>Tues <br />🌧️</p>
+              <p class="high">0<span class="low"> -5</span></p>
+            </div>
+            <div class="col-2">
+              <p>Wed <br />🌤️</p>
+              <p class="high">2<span class="low"> -4</span></p>
+            </div>
+          </div>
+        </div>
+        <p class="developper">
+          This project was coded by <em>Marie-Josée Dubé</em> and is
+          open-sourced on <a href="" target="_blank">GitHub</a> and hosted on
+          <a href="" target="_blank">Netlify</a>
+        </p>
+      </div>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
