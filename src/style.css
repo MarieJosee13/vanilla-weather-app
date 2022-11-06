@@ -14,9 +14,13 @@ h2 {
   color: blueviolet;
   padding: 20px 0 0px 10px;
 }
+p {
+  color: #a6b4cc;
+}
 li {
   display: block;
   text-decoration: none;
+  color: #a6b4cc;
 }
 ul {
   padding: 0 0 15px 12px;
@@ -43,11 +47,16 @@ ul {
 .form-control {
   width: 100%;
   margin: 5px 0 10px 5px;
+  border: #f9f7fe;
+  background-color: #f9f7fe;
 }
 .btn {
+  font-size: 16px;
   margin: 5px 0 10px 0;
   background-color: #885df1;
-  border: 1px solid #885df1;
+  border: none;
+  font-weight: 600;
+  padding: 7px 38px;
 }
 .btn:hover {
   background-color: #885df1;
