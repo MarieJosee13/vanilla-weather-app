@@ -17,20 +17,21 @@
   <body>
     <div class="container"></div>
     <div class="weather-app">
-      <div class="row">
-        <div class="col-6">
-          <input
-            type="search"
-            id="form1"
-            class="form-control"
-            placeholder="Search City"
-          />
+      <form id="search-form">
+        <div class="row">
+          <div class="col-7">
+            <input
+              type="search"
+              id="city-input"
+              class="form-control"
+              placeholder="Search City"
+            />
+          </div>
+          <div class="col-5">
+            <a href="" class="btn btn-primary">Search</a>
+          </div>
         </div>
-        <div class="col-6">
-          <a href="" class="btn btn-primary">Search</a>
-        </div>
-      </div>
-
+      </form>
       <div class="row">
         <div class="col-6">
           <h2 id="city"></h2>
