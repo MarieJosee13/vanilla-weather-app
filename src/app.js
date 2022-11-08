@@ -29,7 +29,9 @@ function displayTemperature(response) {
   let description = document.querySelector("#description");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   humidity.innerHTML = Math.round(response.data.main.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
@@ -43,7 +45,6 @@ function displayTemperature(response) {
 }
 function search(city) {
   let apiKey = "5e910c08188e49716f20c4b9bf7bd81f";
-
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTemperature);
@@ -53,7 +54,30 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-search("Vancouver");
+function displayFarhenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("c-unit");
+  fahrenheitLink.classList.add("f-unit");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("c-unit");
+  fahrenheitLink.classList.remove("f-unit");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsisusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#f-unit");
+fahrenheitLink.addEventListener("click", displayFarhenheitTemperature);
+
+let celsiusLink = document.querySelector("#c-unit");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Vancouver");
