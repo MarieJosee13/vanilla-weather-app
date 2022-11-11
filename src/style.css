@@ -94,3 +94,12 @@ a,
 .low {
   color: #fb9db8;
 }
+.weather-forecast {
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  padding-left: 70px;
+}
+.five-high {
+  font-weight: bolder;
+}
