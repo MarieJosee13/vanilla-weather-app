@@ -30,29 +30,15 @@ ul {
   position: relative;
   top: -8px;
 }
-.unit {
-  font-size: 20px;
-  position: relative;
-  top: -35px;
-}
 
-a,
-.f-unit {
-  font-size: 20px;
-  position: relative;
-  text-decoration: none;
-  color: #885df1;
-}
 .c-unit {
   text-decoration: none;
   color: #000;
   cursor: default;
-}
-.c-unit:hover {
-  color: #000;
-}
-.f-unit:hover {
-  color: #66e1e9;
+  font-size: 20px;
+  position: relative;
+  top: -35px;
+  padding-right: 20px;
 }
 
 .weather-app {
